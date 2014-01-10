@@ -103,7 +103,9 @@ boot(void)
 
 	kprintf("Eric's system version %s (%s #%d)\n", 
 		GROUP_VERSION, buildconfig, buildversion);
-	hello();
+	#if OPT_A0
+		hello();
+	#endif
 	kprintf("\n");
 
 	/* Early initialization. */
